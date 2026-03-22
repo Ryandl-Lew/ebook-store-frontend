@@ -1,0 +1,130 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f4ff 0%, #eef7ff 50%, #f8f9ff 100%);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(34, 76, 152, 0.12);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.brand-figure {
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #2d4ea4;
+  font-weight: 700;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d4ea4;
+  color: #ffffff;
+}
+
+.login-header h1 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 26px;
+}
+
+.login-header p {
+  margin: 10px 0 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.login-form input {
+  margin-bottom: 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-form input:focus {
+  border-color: #2d4ea4;
+  box-shadow: 0 0 0 4px rgba(45, 78, 164, 0.12);
+}
+
+.error-text {
+  margin: 0 0 12px;
+  color: #d92d20;
+  background-color: #fef3f2;
+  border: 1px solid #fecdca;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.login-form button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2d4ea4;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.login-form button:hover {
+  background-color: #24408a;
+}
+
+.login-form button:active {
+  transform: translateY(1px);
+}
+
+.login-link-section {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.login-link-text {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.login-link {
+  margin-left: 6px;
+  color: #2d4ea4;
+  text-decoration: none;
+  font-weight: 700;
+}

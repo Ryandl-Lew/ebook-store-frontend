@@ -1,0 +1,162 @@
+.orders-page {
+  min-height: 100vh;
+  padding: 28px;
+  background: linear-gradient(180deg, #f7f9ff 0%, #edf2fb 100%);
+}
+
+.orders-header {
+  max-width: 980px;
+  margin: 0 auto 20px;
+}
+
+.orders-title {
+  margin: 0;
+  color: #101828;
+  font-size: 32px;
+}
+
+.orders-subtitle {
+  margin: 10px 0 0;
+  color: #667085;
+}
+
+.orders-list {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.order-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+  padding: 16px;
+}
+
+.order-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.order-no {
+  margin: 0;
+  color: #344054;
+  font-weight: 600;
+}
+
+.status-tag {
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-pending {
+  color: #b54708;
+  background-color: #fffaeb;
+}
+
+.status-done {
+  color: #027a48;
+  background-color: #ecfdf3;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #f8faff;
+}
+
+.order-book-figure {
+  margin: 0;
+}
+
+.order-book-cover {
+  width: 100px;
+  height: 132px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.order-book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.order-book-title {
+  margin: 0;
+  color: #101828;
+  font-size: 20px;
+}
+
+.order-book-meta {
+  margin: 0;
+  color: #475467;
+}
+
+.order-card-footer {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.order-total {
+  margin: 0;
+  color: #c62828;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.order-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-cancel,
+.btn-pay {
+  height: 40px;
+  border-radius: 9px;
+  border: none;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  color: #344054;
+  background-color: #e4e7ec;
+}
+
+.btn-pay {
+  color: #ffffff;
+  background-color: #2563eb;
+}
+
+.orders-page-footer {
+  max-width: 980px;
+  margin: 18px auto 0;
+}
+
+.orders-back-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+}

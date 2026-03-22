@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="560" viewBox="0 0 400 560">
+  <defs>
+    <linearGradient id="g6" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#173a6a"/>
+      <stop offset="100%" stop-color="#1d76c6"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="560" fill="url(#g6)"/>
+  <rect x="0" y="120" width="400" height="60" fill="#ffffff" fill-opacity="0.16"/>
+  <rect x="0" y="210" width="400" height="24" fill="#ffffff" fill-opacity="0.12"/>
+  <text x="200" y="320" text-anchor="middle" fill="#ffffff" font-size="52" font-family="Segoe UI, Arial" font-weight="700">LIBRARY</text>
+  <text x="200" y="382" text-anchor="middle" fill="#dbefff" font-size="30" font-family="Segoe UI, Arial">科幻推理</text>
+  <text x="200" y="460" text-anchor="middle" fill="#ffffff" font-size="24" font-family="Segoe UI, Arial">E-BOOK STORE</text>
+</svg>

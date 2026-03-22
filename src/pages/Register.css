@@ -1,0 +1,122 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f4ff 0%, #eef7ff 50%, #f8f9ff 100%);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 430px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(34, 76, 152, 0.12);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d4ea4;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.register-title {
+  margin: 0;
+  color: #1f2937;
+  font-size: 26px;
+}
+
+.register-subtitle {
+  margin: 10px 0 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-label {
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.register-input {
+  margin-bottom: 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.register-input:focus {
+  border-color: #2d4ea4;
+  box-shadow: 0 0 0 4px rgba(45, 78, 164, 0.12);
+}
+
+.register-error {
+  margin: 0 0 12px;
+  color: #d92d20;
+  background-color: #fef3f2;
+  border: 1px solid #fecdca;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.register-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2d4ea4;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.register-btn:hover {
+  background-color: #24408a;
+}
+
+.register-btn:active {
+  transform: translateY(1px);
+}
+
+.register-footer {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.register-footer-text {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.register-link {
+  margin-left: 6px;
+  color: #2d4ea4;
+  text-decoration: none;
+  font-weight: 700;
+}

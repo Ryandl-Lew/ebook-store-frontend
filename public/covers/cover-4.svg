@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="560" viewBox="0 0 400 560">
+  <defs>
+    <linearGradient id="g4" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4b2a87"/>
+      <stop offset="100%" stop-color="#8e6fd4"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="560" fill="url(#g4)"/>
+  <rect x="40" y="80" width="320" height="400" rx="14" fill="#ffffff" fill-opacity="0.12"/>
+  <text x="200" y="230" text-anchor="middle" fill="#ffffff" font-size="50" font-family="Segoe UI, Arial" font-weight="700">STORY</text>
+  <text x="200" y="295" text-anchor="middle" fill="#f1e9ff" font-size="30" font-family="Segoe UI, Arial">名著精选</text>
+  <line x1="100" y1="350" x2="300" y2="350" stroke="#ffffff" stroke-opacity="0.5" stroke-width="3"/>
+  <text x="200" y="432" text-anchor="middle" fill="#ffffff" font-size="23" font-family="Segoe UI, Arial">E-BOOK STORE</text>
+</svg>
