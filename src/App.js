@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './Home';
-import BookDetail from './BookDetail';
-import Cart from './Cart';
-import Orders from './Orders';
+import Home from './pages/Home';
+import BookDetail from './pages/BookDetail';
+import Cart from './pages/Cart';
+import Orders from './pages/Orders';
 import { CartProvider } from './CartContext';
 import { OrderProvider } from './OrderContext';
 import LoginPage from './pages/LoginPage';
 import Register from './pages/Register';
-import Profile from './Profile';
+import Profile from './pages/Profile';
 
 const CURRENT_USER_STORAGE_KEY = 'ebook_current_user';
 

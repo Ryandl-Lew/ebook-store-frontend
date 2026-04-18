@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCart } from './CartContext';
-import { useOrder } from './OrderContext';
+import { useCart } from '../CartContext';
+import { useOrder } from '../OrderContext';
 import './Cart.css';
-import { formatPrice } from './utils/price';
+import { formatPrice } from '../utils/price';
 
 function Cart() {
   const navigate = useNavigate();

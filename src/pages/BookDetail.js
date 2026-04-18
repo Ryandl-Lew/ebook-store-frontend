@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { useCart } from './CartContext';
-import { useOrder } from './OrderContext';
-import mockBooks from './mockBooks';
+import { useCart } from '../CartContext';
+import { useOrder } from '../OrderContext';
+import normalizedBooks from '../utils/books';
 import './BookDetail.css';
-import { formatPrice } from './utils/price';
+import { formatPrice } from '../utils/price';
 
 function BookDetail() {
   const { id } = useParams();
@@ -13,7 +13,7 @@ function BookDetail() {
   const { addToCart } = useCart();
   const { createDirectOrder } = useOrder();
 
-  const book = useMemo(() => mockBooks.find((item) => item.id === id), [id]);
+  const book = useMemo(() => normalizedBooks.find((item) => item.id === id), [id]);
 
   if (!book) {
     return (

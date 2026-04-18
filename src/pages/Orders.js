@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useOrder } from './OrderContext';
+import { useOrder } from '../OrderContext';
 import './Orders.css';
-import { formatPrice } from './utils/price';
+import { formatPrice } from '../utils/price';
 
 function Orders() {
   const { orders, cancelOrder, payOrder } = useOrder();
@@ -29,11 +29,7 @@ function Orders() {
             <article className="order-card" key={order.orderNo}>
               <header className="order-card-header">
                 <p className="order-no">订单号：{order.orderNo}</p>
-                <span
-                  className={
-                    isPending ? 'status-tag status-pending' : 'status-tag status-done'
-                  }
-                >
+                <span className={isPending ? 'status-tag status-pending' : 'status-tag status-done'}>
                   {order.status}
                 </span>
               </header>
