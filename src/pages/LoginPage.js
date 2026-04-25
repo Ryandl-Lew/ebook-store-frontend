@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Button } from 'antd';
 import './LoginPage.css';
 
 const TEST_USER = {
@@ -98,7 +99,7 @@ function LoginPage({ onLoginSuccess }) {
             </p>
           ) : null}
 
-          <button type="submit">登录</button>
+          <Button type="primary" htmlType="submit">登录</Button>
         </form>
         <section className="login-link-section">
           <p className="login-link-text">

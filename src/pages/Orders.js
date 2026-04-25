@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Button } from 'antd';
 import { useOrder } from '../OrderContext';
 import './Orders.css';
 import { formatPrice } from '../utils/price';
@@ -54,12 +55,12 @@ function Orders() {
                 <p className="order-total">订单总计：{formatPrice(totalPrice)}</p>
                 {isPending ? (
                   <section className="order-actions" aria-label="订单操作">
-                    <button className="btn-cancel" type="button" onClick={() => cancelOrder(order.orderNo)}>
+                    <Button type="primary" danger className="btn-cancel" onClick={() => cancelOrder(order.orderNo)}>
                       取消订单
-                    </button>
-                    <button className="btn-pay" type="button" onClick={() => payOrder(order.orderNo)}>
+                    </Button>
+                    <Button type="primary" className="btn-pay" onClick={() => payOrder(order.orderNo)}>
                       立即付款
-                    </button>
+                    </Button>
                   </section>
                 ) : null}
               </footer>

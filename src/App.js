@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import 'antd/dist/reset.css';
 import './App.css';
 import Home from './pages/Home';
 import BookDetail from './pages/BookDetail';

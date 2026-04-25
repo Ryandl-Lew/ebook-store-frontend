@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Button } from 'antd';
 import './Register.css';
 
 const USERS_STORAGE_KEY = 'ebook_users';
@@ -120,9 +121,9 @@ function Register() {
             </p>
           ) : null}
 
-          <button className="register-btn" type="submit">
+          <Button type="primary" htmlType="submit" className="register-btn">
             立即注册
-          </button>
+          </Button>
         </form>
 
         <footer className="register-footer">

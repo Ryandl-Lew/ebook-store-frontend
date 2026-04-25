@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Button } from 'antd';
 import './Profile.css';
 
 const USERS_STORAGE_KEY = 'ebook_users';
@@ -138,16 +139,16 @@ function Profile({ currentUsername, onLogout }) {
               </p>
             ) : null}
 
-            <button className="profile-submit-btn" type="submit">
+            <Button type="primary" htmlType="submit" className="profile-submit-btn">
               确认修改
-            </button>
+            </Button>
           </form>
         </section>
 
         <footer className="profile-footer">
-          <button className="profile-logout-btn" type="button" onClick={handleLogoutClick}>
+          <Button type="primary" danger className="profile-logout-btn" onClick={handleLogoutClick}>
             退出登录 / 切换账号
-          </button>
+          </Button>
         </footer>
       </article>
     </main>

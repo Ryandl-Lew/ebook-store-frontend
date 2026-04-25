@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Button } from 'antd';
 import { useCart } from '../CartContext';
 import { useOrder } from '../OrderContext';
 import normalizedBooks from '../utils/books';
@@ -106,12 +107,12 @@ function BookDetail() {
             </div>
 
             <div className="action-buttons">
-              <button className="add-cart-btn" type="button" onClick={handleAddToCart}>
+              <Button type="primary" className="add-cart-btn" onClick={handleAddToCart}>
                 加入购物车
-              </button>
-              <button className="buy-now-btn" type="button" onClick={handleBuyNow}>
+              </Button>
+              <Button type="primary" className="buy-now-btn" onClick={handleBuyNow}>
                 立即购买
-              </button>
+              </Button>
             </div>
           </section>
         </section>
