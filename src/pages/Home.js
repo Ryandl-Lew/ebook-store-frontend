@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import './Home.css';
 import booksData from '../data/Data.json';
-import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import BookCard from '../components/BookCard';
 
@@ -23,8 +22,6 @@ function Home() {
 
   return (
     <main className="home-page">
-      <Header title="电子书店" />
-
       <SearchBar
         value={searchText}
         onChange={(event) => setSearchText(event.target.value)}
