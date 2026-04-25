@@ -61,23 +61,3 @@ code {
   background-color: #ffffff;
 }
 
-/* ============================================
-   书籍封面加载失败时的降级占位符
-   使用 !important 强行覆盖 Ant Design 的字体层叠
-   ============================================ */
-.fallback-cover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  min-height: 200px;
-  background-color: #d4c6b5 !important;
-  color: #4e342e !important;
-  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif !important;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 1rem;
-  box-sizing: border-box;
-}

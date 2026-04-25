@@ -10,6 +10,7 @@ import {
   Divider,
   Space,
   Card,
+  Empty,
   message,
 } from 'antd';
 import {
@@ -23,9 +24,9 @@ import {
   BankOutlined,
   InboxOutlined,
 } from '@ant-design/icons';
-import { useCart } from '../CartContext';
-import { useOrder } from '../OrderContext';
-import normalizedBooks from '../utils/books';
+import { useCart } from '../contexts/CartContext';
+import { useOrder } from '../contexts/OrderContext';
+import booksData from '../data/Data.json';
 import './BookDetail.css';
 import { formatPrice } from '../utils/price';
 
@@ -40,7 +41,7 @@ function BookDetail() {
   const { createDirectOrder } = useOrder();
   const [coverError, setCoverError] = useState(false);
 
-  const book = useMemo(() => normalizedBooks.find((item) => item.id === id), [id]);
+  const book = useMemo(() => booksData.find((item) => String(item.id) === String(id)), [id]);
 
   const decreaseQuantity = () => {
     setQuantity((prev) => Math.max(1, prev - 1));
@@ -159,8 +160,32 @@ function BookDetail() {
               cover={
                 <div className="detail-cover-wrapper">
                   {coverError ? (
-                    <div className="fallback-cover">
-                      《{book.title}》
+                    <div
+                      style={{
+                        backgroundColor: '#d4c6b5',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '100%',
+                        minHeight: 360,
+                        borderRadius: '8px 8px 0 0',
+                        padding: 24,
+                      }}
+                    >
+                      <Empty
+                        image={Empty.PRESENTED_IMAGE_SIMPLE}
+                        description={
+                          <span
+                            style={{
+                              fontFamily: "'Noto Serif SC', 'Songti SC', serif",
+                              color: '#4e342e',
+                              fontSize: '16px',
+                            }}
+                          >
+                            {book.title}
+                          </span>
+                        }
+                      />
                     </div>
                   ) : (
                     <img

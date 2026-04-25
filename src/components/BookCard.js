@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Empty } from 'antd';
 import { formatPrice } from '../utils/price';
 
 /**
@@ -16,8 +17,33 @@ function BookCard({ book }) {
       <Link className="book-link" to={`/books/${book.id}`}>
         <figure className="book-figure">
           {imgError ? (
-            <div className="fallback-cover">
-              {book.title}
+            <div
+              className="book-fallback-wrapper"
+              style={{
+                backgroundColor: '#f4ebd8',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                height: '100%',
+                minHeight: 200,
+                borderRadius: 8,
+              }}
+            >
+              <Empty
+                image={Empty.PRESENTED_IMAGE_SIMPLE}
+                description={
+                  <span
+                    style={{
+                      fontFamily: "'Noto Serif SC', 'Songti SC', serif",
+                      color: '#4e342e',
+                      fontSize: '16px',
+                    }}
+                  >
+                    {book.title}
+                  </span>
+                }
+              />
             </div>
           ) : (
             <img

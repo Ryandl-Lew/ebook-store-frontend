@@ -54,26 +54,6 @@
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.22);
 }
 
-/* ====== 封面图片加载失败的占位降级样式 ====== */
-.detail-cover-fallback {
-  font-family: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #d4c6b5;
-  color: #4e342e;
-  font-size: 22px;
-  font-weight: 600;
-  text-align: center;
-  padding: 0 24px;
-  line-height: 1.6;
-  width: 100%;
-  max-width: 300px;
-  height: 420px;
-  border-radius: 10px;
-  box-shadow: 0 10px 28px rgba(78, 52, 46, 0.15);
-}
-
 /* ====== 右侧内容区 ====== */
 .detail-right-content {
   display: flex;
@@ -280,10 +260,6 @@
   }
 
   .detail-cover {
-    height: 340px;
-  }
-
-  .detail-cover-fallback {
     height: 340px;
   }
 

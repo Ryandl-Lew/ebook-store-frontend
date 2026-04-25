@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Tag } from 'antd';
-import { useOrder } from '../OrderContext';
+import { useOrder } from '../contexts/OrderContext';
 import './Orders.css';
 import { formatPrice } from '../utils/price';
 

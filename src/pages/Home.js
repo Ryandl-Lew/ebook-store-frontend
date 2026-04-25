@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import './Home.css';
-import normalizedBooks from '../utils/books';
+import booksData from '../data/Data.json';
 import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import BookCard from '../components/BookCard';
@@ -11,9 +11,9 @@ function Home() {
   const filteredBooks = useMemo(() => {
     const keyword = searchText.trim().toLowerCase();
     if (!keyword) {
-      return normalizedBooks;
+      return booksData;
     }
-    return normalizedBooks.filter((book) => {
+    return booksData.filter((book) => {
       const titleMatched = book.title.toLowerCase().includes(keyword);
       const authorMatched = book.author.toLowerCase().includes(keyword);
       const isbnMatched = book.isbn.toLowerCase().includes(keyword);
