@@ -1,7 +1,6 @@
 .cart-page {
   min-height: 100vh;
   padding: 28px;
-  background: linear-gradient(180deg, #f7f9ff 0%, #edf2fb 100%);
 }
 
 .cart-header {
@@ -11,7 +10,7 @@
 
 .cart-title {
   margin: 0;
-  color: #101828;
+  color: #333333;
   font-size: 32px;
 }
 
@@ -28,111 +27,12 @@
   gap: 12px;
 }
 
-.cart-item-row {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
-}
-
-.cart-col-select {
-  width: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.cart-checkbox {
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.cart-col-book {
-  flex: 1;
-  min-width: 260px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
 .cart-book-cover {
   width: 66px;
   height: 86px;
   border-radius: 8px;
   object-fit: cover;
-  background-color: #eef2ff;
-}
-
-.cart-book-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.cart-book-title {
-  margin: 0;
-  color: #101828;
-  font-size: 18px;
-}
-
-.cart-book-author {
-  margin: 0;
-  color: #667085;
-}
-
-.cart-col-price {
-  width: 120px;
-  color: #c62828;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.cart-col-quantity {
-  width: 130px;
-  display: inline-flex;
-  border: 1px solid #d0d5dd;
-  border-radius: 9px;
-  overflow: hidden;
-}
-
-.qty-btn {
-  width: 38px;
-  height: 38px;
-  border: none;
-  background-color: #f2f4f7;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.qty-value {
-  width: 54px;
-  height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  font-weight: 700;
-}
-
-.cart-col-action {
-  width: 96px;
-  display: flex;
-  justify-content: center;
-}
-
-.delete-btn {
-  width: 80px;
-  height: 38px;
-  border: none;
-  border-radius: 8px;
-  background-color: #dc2626;
-  color: #ffffff;
-  font-weight: 700;
-  cursor: pointer;
+  background-color: #e8ddd0;
 }
 
 .cart-checkout-bar {
@@ -156,7 +56,7 @@
 }
 
 .checkout-select-all-text {
-  color: #344054;
+  color: #4a4a4a;
   font-weight: 600;
 }
 
@@ -168,7 +68,7 @@
 
 .checkout-total-text {
   margin: 0;
-  color: #344054;
+  color: #4a4a4a;
   font-size: 18px;
 }
 
@@ -178,25 +78,13 @@
   font-weight: 800;
 }
 
-.checkout-btn {
-  height: 42px;
-  border: none;
-  border-radius: 9px;
-  padding: 0 20px;
-  color: #ffffff;
-  background-color: #2563eb;
-  font-size: 16px;
-  font-weight: 800;
-  cursor: pointer;
-}
-
 .cart-back-footer {
   max-width: 1080px;
   margin: 16px auto 0;
 }
 
 .cart-back-link {
-  color: #2563eb;
+  color: #5b8c85;
   text-decoration: none;
   font-weight: 700;
 }

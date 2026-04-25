@@ -1,8 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { formatPrice } from '../utils/price';
-
-const getFallbackCover = (title) =>
-  `https://placehold.co/200x280/2f4bdb/ffffff?text=${encodeURIComponent(title)}`;
 
 /**
  * 单本书籍卡片（通用构件）
@@ -11,19 +9,24 @@ const getFallbackCover = (title) =>
  *   book  {{ id, title, cover, price }}  书籍数据
  */
 function BookCard({ book }) {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <article className="book-card">
       <Link className="book-link" to={`/books/${book.id}`}>
         <figure className="book-figure">
-          <img
-            className="book-cover"
-            src={book.cover}
-            alt={`${book.title}封面`}
-            onError={(event) => {
-              event.currentTarget.onerror = null;
-              event.currentTarget.src = getFallbackCover(book.title);
-            }}
-          />
+          {imgError ? (
+            <div className="fallback-cover">
+              {book.title}
+            </div>
+          ) : (
+            <img
+              className="book-cover"
+              src={book.cover}
+              alt={`${book.title}封面`}
+              onError={() => setImgError(true)}
+            />
+          )}
           <figcaption className="book-title">{book.title}</figcaption>
         </figure>
         <p className="book-price">{formatPrice(book.price)}</p>

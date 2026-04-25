@@ -4,7 +4,6 @@
   align-items: flex-start;
   justify-content: center;
   padding: 30px 20px;
-  background: linear-gradient(180deg, #f6f8ff 0%, #eef3ff 100%);
 }
 
 .profile-card {
@@ -22,13 +21,13 @@
 
 .profile-title {
   margin: 0;
-  color: #101828;
+  color: #333333;
   font-size: 30px;
 }
 
 .profile-subtitle {
   margin: 10px 0 0;
-  color: #475467;
+  color: #4a4a4a;
   font-size: 15px;
 }
 
@@ -40,7 +39,7 @@
 
 .profile-section-title {
   margin: 0 0 12px;
-  color: #1d2939;
+  color: #333333;
   font-size: 22px;
 }
 
@@ -65,7 +64,7 @@
 
 .profile-label {
   margin-bottom: 6px;
-  color: #1f2937;
+  color: #333333;
   font-weight: 600;
 }
 
@@ -80,8 +79,8 @@
 }
 
 .profile-input:focus {
-  border-color: #2d4ea4;
-  box-shadow: 0 0 0 4px rgba(45, 78, 164, 0.12);
+  border-color: #5b8c85;
+  box-shadow: 0 0 0 4px rgba(91, 140, 133, 0.15);
 }
 
 .profile-error {
@@ -102,7 +101,7 @@
   font-size: 15px;
   font-weight: 700;
   color: #ffffff;
-  background-color: #2d4ea4;
+  background-color: #5b8c85;
   cursor: pointer;
 }
 

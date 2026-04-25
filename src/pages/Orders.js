@@ -1,8 +1,47 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'antd';
+import { Button, Tag } from 'antd';
 import { useOrder } from '../OrderContext';
 import './Orders.css';
 import { formatPrice } from '../utils/price';
+
+/** 订单中的书籍封面组件（含图片加载降级） */
+function OrderBookCover({ book }) {
+  const [imgError, setImgError] = useState(false);
+
+  if (imgError) {
+    return (
+      <div
+        style={{
+          width: 100,
+          height: 132,
+          borderRadius: 8,
+          backgroundColor: '#e8ddd0',
+          color: '#6b5c4b',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          fontSize: 13,
+          fontWeight: 600,
+          padding: 8,
+          fontFamily: 'inherit',
+        }}
+      >
+        {book.title}
+      </div>
+    );
+  }
+
+  return (
+    <img
+      className="order-book-cover"
+      src={book.cover}
+      alt={`${book.title}封面`}
+      onError={() => setImgError(true)}
+    />
+  );
+}
 
 function Orders() {
   const { orders, cancelOrder, payOrder } = useOrder();
@@ -30,16 +69,20 @@ function Orders() {
             <article className="order-card" key={order.orderNo}>
               <header className="order-card-header">
                 <p className="order-no">订单号：{order.orderNo}</p>
-                <span className={isPending ? 'status-tag status-pending' : 'status-tag status-done'}>
+                <Tag color={
+                  order.status.includes('取消') ? 'volcano' :
+                  order.status.includes('完成') || order.status.includes('成功') ? 'success' :
+                  isPending ? 'warning' : 'default'
+                }>
                   {order.status}
-                </span>
+                </Tag>
               </header>
 
               <section className="order-items" aria-label="订单商品信息">
                 {orderItems.map((item, index) => (
                   <section className="order-item" key={`${order.orderNo}-${item.book.id}-${index}`}>
                     <figure className="order-book-figure">
-                      <img className="order-book-cover" src={item.book.cover} alt={`${item.book.title}封面`} />
+                      <OrderBookCover book={item.book} />
                     </figure>
 
                     <section className="order-book-info">

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Table, Button, Checkbox, InputNumber, message } from 'antd';
 import { useCart } from '../CartContext';
@@ -62,12 +62,7 @@ function Cart() {
       key: 'book',
       render: (book) => (
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <img
-            className="cart-book-cover"
-            src={book.cover}
-            alt={`${book.title}封面`}
-            style={{ width: 80, height: 112, objectFit: 'cover', borderRadius: 4 }}
-          />
+          <CartBookCover book={book} />
           <div>
             <div style={{ fontWeight: 600, fontSize: 16 }}>{book.title}</div>
             <div style={{ color: '#888', marginTop: 4 }}>作者：{book.author}</div>
@@ -166,6 +161,45 @@ function Cart() {
         </Link>
       </footer>
     </main>
+  );
+}
+
+/** 购物车中的书籍封面组件（含图片加载降级） */
+function CartBookCover({ book }) {
+  const [imgError, setImgError] = useState(false);
+
+  if (imgError) {
+    return (
+      <div
+        style={{
+          width: 80,
+          height: 112,
+          borderRadius: 4,
+          backgroundColor: '#e8ddd0',
+          color: '#6b5c4b',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          fontSize: 12,
+          fontWeight: 600,
+          padding: 6,
+          fontFamily: 'inherit',
+        }}
+      >
+        {book.title}
+      </div>
+    );
+  }
+
+  return (
+    <img
+      className="cart-book-cover"
+      src={book.cover}
+      alt={`${book.title}封面`}
+      style={{ width: 80, height: 112, objectFit: 'cover', borderRadius: 4 }}
+      onError={() => setImgError(true)}
+    />
   );
 }
 

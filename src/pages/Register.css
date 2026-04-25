@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f0f4ff 0%, #eef7ff 50%, #f8f9ff 100%);
   padding: 24px;
   box-sizing: border-box;
 }
@@ -14,7 +13,7 @@
   background-color: #ffffff;
   border-radius: 16px;
   padding: 28px;
-  box-shadow: 0 12px 30px rgba(34, 76, 152, 0.12);
+  box-shadow: 0 12px 30px rgba(91, 140, 133, 0.1);
 }
 
 .register-header {
@@ -30,14 +29,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2d4ea4;
+  background-color: #5b8c85;
   color: #ffffff;
   font-weight: 700;
 }
 
 .register-title {
   margin: 0;
-  color: #1f2937;
+  color: #333333;
   font-size: 26px;
 }
 
@@ -55,7 +54,7 @@
 .register-label {
   margin-bottom: 7px;
   font-weight: 600;
-  color: #1f2937;
+  color: #333333;
 }
 
 .register-input {
@@ -69,8 +68,8 @@
 }
 
 .register-input:focus {
-  border-color: #2d4ea4;
-  box-shadow: 0 0 0 4px rgba(45, 78, 164, 0.12);
+  border-color: #5b8c85;
+  box-shadow: 0 0 0 4px rgba(91, 140, 133, 0.15);
 }
 
 .register-error {
@@ -81,26 +80,6 @@
   border-radius: 8px;
   padding: 8px 10px;
   font-size: 13px;
-}
-
-.register-btn {
-  border: none;
-  border-radius: 10px;
-  padding: 12px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: #2d4ea4;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-.register-btn:hover {
-  background-color: #24408a;
-}
-
-.register-btn:active {
-  transform: translateY(1px);
 }
 
 .register-footer {
@@ -116,7 +95,7 @@
 
 .register-link {
   margin-left: 6px;
-  color: #2d4ea4;
+  color: #5b8c85;
   text-decoration: none;
   font-weight: 700;
 }

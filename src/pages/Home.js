@@ -5,12 +5,6 @@ import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import BookCard from '../components/BookCard';
 
-const NAV_LINKS = [
-  { label: '购物车', to: '/cart' },
-  { label: '我的订单', to: '/orders' },
-  { label: '个人主页', to: '/profile' },
-];
-
 function Home() {
   const [searchText, setSearchText] = useState('');
 
@@ -29,11 +23,7 @@ function Home() {
 
   return (
     <main className="home-page">
-      <Header
-        title="电子书店"
-        desc="精选全球热门图书，快速查找并加入购物车。"
-        navLinks={NAV_LINKS}
-      />
+      <Header title="电子书店" />
 
       <SearchBar
         value={searchText}

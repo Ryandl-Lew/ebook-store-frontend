@@ -1,13 +1,83 @@
+/* ============================================
+   E-Bookstore — 文艺清新视觉主题
+   木质书架质感 · 温润排版 · 长文友好
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+
+  /* 浅橡木色背景 —— 模拟木质书架的温润质感 */
+  background-color: #f4ead5;
+
+  /* 深炭灰文字，代替纯黑，适合长时间阅读 */
+  color: #4a4a4a;
+
+  /* 默认字体栈：优先衬线体（文艺感）→ 无衬线兜底 */
+  font-family:
+    'Noto Serif SC',
+    'Songti SC',
+    'STSong',
+    'Times New Roman',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* 行高略微加大，提升阅读呼吸感 */
+  line-height: 1.6;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+::selection {
+  background-color: rgba(91, 140, 133, 0.25);
+  color: #2c3e3a;
+}
+
+/* ============================================
+   全局卡片 / 容器使用纸白背景，
+   放在木质背景上营造"书本摆在书架"的立体感
+   ============================================ */
+.card-white {
+  background-color: #ffffff;
+}
+
+/* ============================================
+   书籍封面加载失败时的降级占位符
+   使用 !important 强行覆盖 Ant Design 的字体层叠
+   ============================================ */
+.fallback-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background-color: #d4c6b5 !important;
+  color: #4e342e !important;
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
